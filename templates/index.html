@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图片标注管理系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>图片标注管理系统</h1>
+            <div class="folder-input">
+                <input type="text" id="folderPath" placeholder="请输入文件夹路径">
+                <button onclick="scanFolder()">扫描文件夹</button>
+            </div>
+            <div class="batch-annotation">
+                <input type="text" id="batchAnnotation" placeholder="输入要批量添加的标注内容">
+                <select id="insertPosition">
+                    <option value="end">添加到尾部</option>
+                    <option value="start">添加到头部</option>
+                </select>
+                <button onclick="addBatchAnnotation()">添加到全部标注</button>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="image-list">
+                <h2>图片列表</h2>
+                <div class="common-tags">
+                    <h3>高频标注 (点击筛选)</h3>
+                    <div id="tagStats" class="tag-stats"></div>
+                </div>
+                <div id="imageContainer" class="thumbnail-grid"></div>
+            </div>
+            
+            <div class="preview">
+                <h2>预览</h2>
+                <div class="preview-container">
+                    <img id="previewImage" src="" alt="预览图片">
+                    <textarea id="annotation" placeholder="在此输入标注内容"></textarea>
+                    <button onclick="saveAnnotation()">保存标注</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
