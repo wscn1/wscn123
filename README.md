@@ -24,3 +24,7 @@
 ```bash
 git clone https://github.com/wscn1/wscn123.git
 cd wscn123
+python3 -m venv venv
+source venv/bin/activate
+pip install flask pillow
+python app.py
