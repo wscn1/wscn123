@@ -1,6 +1,6 @@
 # 图片标注管理系统
 
-一个简单的图片标注管理工具，支持批量标注、标注统计和筛选功能。
+由阿屿同学制作的一个简单的图片标注管理工具，支持批量标注、标注统计和筛选功能。
 
 ## 功能特点
 
@@ -24,11 +24,9 @@
 ```bash
 git clone https://github.com/wscn1/wscn123.git
 cd wscn123
-2. 启动虚拟环境：
-```bash
+#启动虚拟环境：
 python3 -m venv venv
 source venv/bin/activate
-3. 安装依赖和启动应用：
-```bash
+#安装依赖和启动应用：
 pip install flask pillow
 python app.py
