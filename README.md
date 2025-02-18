@@ -24,7 +24,11 @@
 ```bash
 git clone https://github.com/wscn1/wscn123.git
 cd wscn123
+2. 启动虚拟环境：
+```bash
 python3 -m venv venv
 source venv/bin/activate
+3. 安装依赖和启动应用：
+```bash
 pip install flask pillow
 python app.py
